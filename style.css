@@ -39,9 +39,9 @@
 
 .right-image {
   width: 50%;
+  height: 100vh; /* make sure it's visible */
   background-image: url('hero-background.jpg');
-  background-color: #ddd;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-
