@@ -32,13 +32,18 @@ nav a {
   text-decoration: none;
 }
 .hero {
-  background-image: url('hero-background.jpg'); /* make sure the file name matches */
+  background-image: url('hero-background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 20px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  padding: 2rem;
 }
 .info-section, .contact {
   padding: 40px 20px;
