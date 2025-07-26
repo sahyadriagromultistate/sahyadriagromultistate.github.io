@@ -40,6 +40,8 @@
 .right-image {
   width: 50%;
   background-image: url('hero-background.jpg');
+  background-color: #ddd;
   background-size: cover;
   background-position: center;
 }
+
