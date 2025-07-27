@@ -58,12 +58,16 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('hero.jpg');
+  background-image: url('your-image-name.png');
   background-size: cover;
   background-position: center;
-  height: 400px;
-  position: relative;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
 }
+
 
 .hero-text {
   position: absolute;
