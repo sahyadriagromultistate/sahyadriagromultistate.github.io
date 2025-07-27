@@ -1,79 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shri Sahyadri Agro Multistate Co-Op Society Ltd</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Shri Sahyadri Agro Multistate Co-op Society Ltd</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body class="bg-gray-100">
-  <!-- Navbar -->
-  <header class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full" />
-        <h1 class="text-xl font-bold uppercase">Shri Sahyadri Agro Multistate</h1>
-      </div>
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <h1>Shri Sahyadri Agro Multistate Co-op Society Ltd</h1>
       <nav>
-        <ul class="flex space-x-6 text-white font-semibold">
+        <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#registration">Registration Certificate</a></li>
+          <li><a href="registration-certificate.pdf" target="_blank">Registration Certificate</a></li>
           <li><a href="#election">Election</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('header-bg.png');">
-    <div class="bg-black bg-opacity-50 p-6 rounded-xl">
-      <h2 class="text-3xl md:text-5xl font-bold mb-4">SHRI SAHYADRI AGRO MULTISTATE CO-OP SOCIETY LTD</h2>
-      <p class="text-xl md:text-2xl">Cultivating Community and Sustainability</p>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Cultivating Community and Sustainability</h2>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section id="products" class="py-16 px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6 text-green-700">Our Products</h2>
-    <p class="text-gray-700">Details about products go here...</p>
-  </section>
+  <main>
+    <section id="products">
+      <h2>What We Offer</h2>
+      <p>High-quality seeds, fertilizers, farming equipment, and expert advice to support sustainable agriculture.</p>
+    </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="py-16 px-4 text-center bg-gray-50">
-    <h2 class="text-3xl font-bold mb-6 text-green-700">Gallery</h2>
-    <p class="text-gray-700">Gallery content goes here...</p>
-  </section>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>Images of our farming activities and community work will go here.</p>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6 text-green-700">Contact Us</h2>
-    <p class="text-gray-700">Email: sahyadriagromultistate@gmail.com | Phone: 9423193809</p>
-  </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: sahyadriagromultistate@gmail.com<br />
+         Phone: +91 9423193809</p>
+    </section>
 
-  <!-- Registration Certificate Section -->
-  <section id="registration" class="py-16 px-4 bg-white text-center">
-    <h2 class="text-3xl font-bold mb-6 text-green-700">Registration Certificate</h2>
-    <p class="mb-6 text-gray-700">Click the button below to view or download our registration certificate.</p>
-    <a href="registration-certificate.pdf" target="_blank" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300">
-      View Certificate
-    </a>
-  </section>
+    <section id="election">
+      <h2>Election</h2>
+      <p>All voter lists and election-related updates will be posted here.</p>
+    </section>
+  </main>
 
-  <!-- Election Section -->
-  <section id="election" class="py-16 px-4 text-center bg-gray-50">
-    <h2 class="text-3xl font-bold mb-6 text-green-700">Election</h2>
-    <p class="mb-6 text-gray-700">This section will include voter lists, schedules, and other election details. Documents will be uploaded shortly.</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-green-800 text-white text-center py-6">
-    <p>&copy; 2025 Shri Sahyadri Agro Multistate Co-Op Society Ltd. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 Shri Sahyadri Agro Multistate Co-op Society Ltd. All rights reserved.</p>
   </footer>
-</body>
 
+</body>
 </html>
