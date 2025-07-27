@@ -3,86 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shri Sahyadri Agro Multistate Co-op Society Ltd</title>
+  <title>Sahyadri Agro Multistate Cooperative</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <nav>
-    <div class="nav-left">
-      <img src="logo.png" alt="Logo" class="logo" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="registration-certificate.pdf" target="_blank">Registration Certificate</a></li>
-      <li><a href="#election">Election</a></li>
-    </ul>
-  </nav>
-
-  <header id="home" class="hero">
-    <h1>SHRI SAHYADRI AGRO MULTISTATE CO-OP SOCIETY LTD</h1>
-    <p>Cultivating Community and Sustainability</p>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('products')">Products</a></li>
+        <li><a href="#" onclick="showSection('gallery')">Gallery</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="registration-certificate.pdf" target="_blank">Registration Certificate</a></li>
+        <li><a href="#" onclick="showSection('election')">Election</a></li>
+        <li><a href="#" onclick="showSection('directors')">Board of Directors</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="about-offer">
-    <div class="column">
-      <h2>About Us</h2>
-      <p>We are committed to uplifting the agricultural community through sustainable practices, innovative inputs, and cooperative growth models.</p>
-    </div>
-    <div class="column">
-      <h2>What We Offer</h2>
-      <p>From high-quality fertilizers to expert support, we provide a comprehensive range of agro products and services that empower farmers.</p>
-    </div>
-  </section>
+  <main>
+    <section id="home" class="content-section active">
+      <div class="two-column">
+        <div>
+          <h2>About Us</h2>
+          <p>Welcome to Shri Sahyadri Agro Multistate Cooperative Society Ltd. We aim to provide high-quality agricultural products and services to farmers across the region.</p>
+        </div>
+        <div>
+          <h2>What We Offer</h2>
+          <p>We offer a wide range of fertilizers, pesticides, and agricultural consultancy to help farmers maximize productivity sustainably.</p>
+        </div>
+      </div>
+    </section>
 
-  <section id="products">
-    <h2>Our Products</h2>
-    <ul>
-      <li>NPK</li>
-      <li>DAP</li>
-      <li>Water Soluble Fertilizers</li>
-      <li>Urea</li>
-      <li>Complex Grade Pesticides</li>
-    </ul>
-  </section>
+    <section id="products" class="content-section">
+      <h2>Our Products</h2>
+      <ul>
+        <li>NPK</li>
+        <li>DAP</li>
+        <li>Water Soluble Fertilizers</li>
+        <li>Urea</li>
+        <li>Complex Grade Pesticides</li>
+      </ul>
+    </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="gallery1.jpg" alt="Gallery Image 1" />
-      <img src="gallery2.jpg" alt="Gallery Image 2" />
-      <img src="gallery3.jpg" alt="Gallery Image 3" />
-      <!-- Add more images as needed -->
-    </div>
-  </section>
+    <section id="gallery" class="content-section">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="gallery1.jpg" alt="Gallery Image 1" />
+        <img src="gallery2.jpg" alt="Gallery Image 2" />
+        <img src="gallery3.jpg" alt="Gallery Image 3" />
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: sahyadriagromultistate@gmail.com</p>
-    <p>Phone: +91 9423193809</p>
-  </section>
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>Email: sahyadriagromultistate@gmail.com</p>
+      <p>Phone: +91 9423193809</p>
+    </section>
 
-  <section id="election">
-    <h2>Election</h2>
-    <p>All voter lists and updates will be posted here.</p>
-  </section>
+    <section id="election" class="content-section">
+      <h2>Election</h2>
+      <p>All voter lists and updates will be posted here.</p>
+    </section>
 
-  <section id="board">
-    <h2>Board of Directors</h2>
-    <ul>
-      <li>Director 1 – Chairman</li>
-      <li>Director 2 – Vice Chairman</li>
-      <li>Director 3 – Treasurer</li>
-      <!-- Add more directors as required -->
-    </ul>
-  </section>
+    <section id="directors" class="content-section">
+      <h2>Board of Directors</h2>
+      <ul>
+        <li>Director 1 – Chairman</li>
+        <li>Director 2 – Vice Chairman</li>
+        <li>Director 3 – Treasurer</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Shri Sahyadri Agro Multistate Co-op Society Ltd</p>
+    <p>&copy; 2025 Shri Sahyadri Agro Multistate Cooperative Society Ltd.</p>
   </footer>
 
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
