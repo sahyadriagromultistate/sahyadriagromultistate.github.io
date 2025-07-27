@@ -1,144 +1,107 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
 }
 
-/* Navbar */
-nav {
+header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav .logo {
-  height: 45px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #007f3f;
-}
-
-/* Hero */
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #e6f4ea;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  color: #2d552f;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  margin-top: 10px;
-  color: #555;
-}
-
-/* About and Offer section */
-.about-offer {
-  display: flex;
   justify-content: space-between;
-  gap: 30px;
-  padding: 40px 20px;
-  max-width: 1100px;
-  margin: auto;
+  background-color: #008040;
+  padding: 10px 20px;
   flex-wrap: wrap;
 }
 
-.about-offer .column {
+.logo {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.content-section {
+  display: none;
+  margin-top: 20px;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.two-column {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.two-column > div {
   flex: 1;
   min-width: 300px;
 }
 
-.about-offer h2 {
-  color: #007f3f;
-  margin-bottom: 10px;
+h2 {
+  color: #008040;
 }
 
-/* Sections */
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section h2 {
-  color: #007f3f;
-  margin-bottom: 15px;
-}
-
-/* Product List */
 ul {
-  list-style: disc;
   padding-left: 20px;
 }
 
-/* Gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .gallery img {
-  width: 100%;
+  width: 300px;
+  height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
 footer {
-  background-color: #007f3f;
+  background-color: #008040;
   color: white;
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
+  padding: 10px;
+  margin-top: 40px;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
+    background-color: #008040;
+    padding: 10px 0;
   }
 
-  .about-offer {
+  .two-column {
     flex-direction: column;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .gallery img {
+    width: 100%;
   }
 }
