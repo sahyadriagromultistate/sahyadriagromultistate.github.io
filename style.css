@@ -1,39 +1,36 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2e2e2e;
   background-color: #f8f8f8;
+  color: #333;
   line-height: 1.6;
 }
 
-/* Navigation Bar */
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
-nav img.logo {
-  height: 50px;
+nav .logo {
+  height: 45px;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  list-style: none;
 }
 
 nav ul li {
@@ -51,49 +48,64 @@ nav ul li a:hover {
   color: #007f3f;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  background: url('field_bg.jpg') no-repeat center center/cover;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 60px 20px;
   text-align: center;
-  color: white;
-  padding: 20px;
+  background-color: #e6f4ea;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  color: #2d552f;
 }
 
 .hero p {
   font-size: 1.3rem;
   margin-top: 10px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: #555;
 }
 
-/* Section Styling */
+/* About and Offer section */
+.about-offer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.about-offer .column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-offer h2 {
+  color: #007f3f;
+  margin-bottom: 10px;
+}
+
+/* Sections */
 section {
-  padding: 60px 20px;
+  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
 section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
   color: #007f3f;
+  margin-bottom: 15px;
 }
 
-section ul {
-  list-style-type: disc;
-  margin-left: 20px;
+/* Product List */
+ul {
+  list-style: disc;
+  padding-left: 20px;
 }
 
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -102,9 +114,8 @@ section ul {
 
 .gallery img {
   width: 100%;
-  height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Footer */
@@ -116,18 +127,18 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive Adjustments */
+/* Mobile */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .about-offer {
+    flex-direction: column;
   }
 
-  .hero p {
-    font-size: 1.1rem;
+  .hero h1 {
+    font-size: 2rem;
   }
 }
