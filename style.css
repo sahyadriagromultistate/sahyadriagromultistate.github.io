@@ -1,107 +1,128 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #008040;
-  padding: 10px 20px;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  height: 40px;
+  height: 50px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  padding: 0;
-  margin: 0;
 }
 
-nav li a {
+nav a {
   text-decoration: none;
-  color: white;
+  color: #006400;
   font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
-nav li a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: #228B22;
 }
 
-main {
-  padding: 20px;
-}
-
-.content-section {
+/* Sections */
+section {
+  padding: 60px 30px;
+  max-width: 1000px;
+  margin: auto;
   display: none;
-  margin-top: 20px;
 }
 
-.content-section.active {
+section.active {
   display: block;
 }
 
-.two-column {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+/* Intro (always visible) */
+#about,
+#offer {
+  display: block;
+  padding-top: 40px;
 }
 
-.two-column > div {
-  flex: 1;
-  min-width: 300px;
-}
-
+/* Headings */
 h2 {
-  color: #008040;
+  color: #008000;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
 ul {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
+/* Gallery */
 .gallery {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .gallery img {
-  width: 300px;
-  height: auto;
+  width: 100%;
+  max-width: 300px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Contact */
+.contact-info {
+  font-size: 18px;
+}
+
+/* Footer */
 footer {
-  background-color: #008040;
+  background-color: #008000;
   color: white;
   text-align: center;
-  padding: 10px;
-  margin-top: 40px;
+  padding: 15px;
+  margin-top: 60px;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 10px;
-    background-color: #008040;
-    padding: 10px 0;
+    align-items: flex-end;
   }
 
-  .two-column {
+  header {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery {
+    justify-content: center;
   }
 
   .gallery img {
-    width: 100%;
+    max-width: 90%;
   }
 }
