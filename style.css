@@ -58,16 +58,19 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('your-image-name.png');
+  background-image: url('field_bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 100px;
+  padding: 50px 20px;
+  color: white;
 }
-
 
 .hero-text {
   position: absolute;
