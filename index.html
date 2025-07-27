@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shri Sahyadri Agro Multistate Co-op Society Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Sahyadri Agro Multistate</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header class="navbar">
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo" class="logo"/>
-      <span class="title">Shri Sahyadri Agro Multistate Co-op Society Ltd</span>
+    <div class="logo">
+      <img src="logo.png" alt="Sahyadri Logo">
     </div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navMenu">
       <a href="#home">Home</a>
       <a href="#products">Products</a>
       <a href="#gallery">Gallery</a>
@@ -20,22 +23,27 @@
       <a href="registration-certificate.pdf" target="_blank">Registration Certificate</a>
       <a href="#election">Election</a>
     </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
 
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Cultivating Community and Sustainability</h1>
+    <div class="hero-overlay">
+      <h1>SHRI SAHYADRI AGRO MULTISTATE CO-OP SOCIETY LTD</h1>
+      <p>Cultivating Community and Sustainability</p>
     </div>
   </section>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>We are committed to empowering farmers by providing high-quality agricultural products and sustainable farming support across India.</p>
-  </section>
-
-  <section class="offer">
-    <h2>What We Offer</h2>
-    <p>High-quality seeds, fertilizers, farming equipment, and expert guidance to support sustainable agriculture.</p>
+  <section class="about-offer">
+    <div class="about">
+      <h2>About Us</h2>
+      <p>We are a cooperative society dedicated to the prosperity of farmers by providing high-quality agricultural products and solutions. With a focus on sustainability and growth, we bridge modern practices with traditional values.</p>
+    </div>
+    <div class="offer">
+      <h2>What We Offer</h2>
+      <p>We offer premium fertilizers, seeds, pesticides, and expert agricultural support to help farmers grow better and smarter.</p>
+    </div>
   </section>
 
   <section id="products" class="products">
@@ -43,30 +51,43 @@
     <ul>
       <li>NPK</li>
       <li>DAP</li>
-      <li>Water Soluble Fertilizers</li>
+      <li>Water Soluble</li>
       <li>Urea</li>
-      <li>Complex Grade Pesticides</li>
+      <li>Complex Grade Pesticide</li>
     </ul>
   </section>
 
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
-    <p>Images of our farming activities and events will be displayed here soon.</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: sahyadriagromultistate@gmail.com</p>
-    <p>Phone: +91 9423193809</p>
+    <div class="gallery-images">
+      <!-- Add your images here -->
+      <img src="gallery1.jpg" alt="Image 1">
+      <img src="gallery2.jpg" alt="Image 2">
+      <img src="gallery3.jpg" alt="Image 3">
+    </div>
   </section>
 
   <section id="election" class="election">
     <h2>Election</h2>
-    <p>Election-related updates, including the voter's list and official documents, will be posted here.</p>
+    <p>Upcoming election details, voter lists and candidate information will be updated here.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> sahyadriagromultistate@gmail.com</p>
+    <p><strong>Phone:</strong> +91 9423193809</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Shri Sahyadri Agro Multistate Co-op Society Ltd. All rights reserved.</p>
+    <p>&copy; 2025 Shri Sahyadri Agro Multistate Co-op Society Ltd</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>
