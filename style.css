@@ -1,4 +1,4 @@
-/* Reset & base styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,161 +6,95 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #fdfbf7;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f0;
   color: #333;
 }
 
-/* Navigation Bar */
-nav {
-  background-color: #084c10;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
+/* Header */
+header {
+  background-color: #ffffffcc;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-nav img {
-  height: 40px;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 20px;
+}
+
+header h1 {
+  flex-grow: 1;
+  font-size: 1.4rem;
+  color: #205020;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
-nav ul li a {
-  color: white;
+nav a {
   text-decoration: none;
+  color: #205020;
   font-weight: bold;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: #2e7d32;
 }
 
 /* Hero Section */
 .hero {
-  background: url('field_bg.jpg') no-repeat center center/cover;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
   color: white;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
+  background-color: rgba(0, 100, 0, 0.6);
+  padding: 20px;
   border-radius: 10px;
 }
 
-.hero p {
-  font-size: 1.5rem;
-  margin-top: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
-/* Section layout */
-section {
-  padding: 60px 30px;
-}
-
-.about-offer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-  background: linear-gradient(to right, #fdfbf7, #f2eadf);
-}
-
-.about,
-.offer {
-  flex: 1 1 45%;
-}
-
-.about h2,
-.offer h2,
-section h2 {
+.hero-text h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
-  color: #4b320c;
 }
 
-.about p,
-.offer ul {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
+/* Sections */
+main {
+  padding: 40px 20px;
 }
 
-.offer ul {
-  list-style: disc;
-  padding-left: 20px;
+main section {
+  margin-bottom: 40px;
 }
 
-/* Contact, Certificate, Election */
-#contact,
-#registration,
-#election {
-  background-color: #f9f6ef;
-  border-top: 2px solid #ccc;
-}
-
-.download-link {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #084c10;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.download-link:hover {
-  background-color: #0b6f16;
+main h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
-  background-color: #084c10;
-  color: white;
+  background-color: #e0e0e0;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-  .about-offer {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    background: #084c10;
-    padding: 10px;
-  }
+  padding: 15px;
 }
