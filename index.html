@@ -1,32 +1,79 @@
-<body>
-  <header class="header">
-    <img src="logo.png" alt="Sahyadri Logo" style="height: 60px;">
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="registration-certificate.pdf" target="_blank">Registration Certificate</a></li>
-      </ul>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Sahyadri Agro Multistate Co-Op Society Ltd</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <header class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full" />
+        <h1 class="text-xl font-bold uppercase">Shri Sahyadri Agro Multistate</h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-6 text-white font-semibold">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#registration">Registration Certificate</a></li>
+          <li><a href="#election">Election</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- New Split Hero Section -->
-  <section class="split-hero">
-    <div class="left-content">
-      <h1>Shri Sahyadri Agro Multistate Co-operative Society Ltd</h1>
-      <h2>🌾 About Us</h2>
-      <p>We are committed to empowering farmers and transforming agriculture. Rooted in meritocracy, we deliver high-quality seeds, fertilizers, and crop protection solutions that help farmers achieve sustainability.</p>
-
-      <h2>🧺 What We Offer</h2>
-      <ul>
-        <li>Certified Seeds for optimum germination and robust crop performance</li>
-        <li>High Efficiency Fertilizers that enrich soil and enhance productivity</li>
-        <li>Advanced Pesticides & Fungicides formulated for effective post-harvest disease control</li>
-      </ul>
+  <!-- Hero Section -->
+  <section id="home" class="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('header-bg.png');">
+    <div class="bg-black bg-opacity-50 p-6 rounded-xl">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">SHRI SAHYADRI AGRO MULTISTATE CO-OP SOCIETY LTD</h2>
+      <p class="text-xl md:text-2xl">Cultivating Community and Sustainability</p>
     </div>
-    <div class="right-image"></div>
   </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-green-700">Our Products</h2>
+    <p class="text-gray-700">Details about products go here...</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 px-4 text-center bg-gray-50">
+    <h2 class="text-3xl font-bold mb-6 text-green-700">Gallery</h2>
+    <p class="text-gray-700">Gallery content goes here...</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-green-700">Contact Us</h2>
+    <p class="text-gray-700">Email: sahyadriagromultistate@gmail.com | Phone: 9423193809</p>
+  </section>
+
+  <!-- Registration Certificate Section -->
+  <section id="registration" class="py-16 px-4 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-6 text-green-700">Registration Certificate</h2>
+    <p class="mb-6 text-gray-700">Click the button below to view or download our registration certificate.</p>
+    <a href="registration-certificate.pdf" target="_blank" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300">
+      View Certificate
+    </a>
+  </section>
+
+  <!-- Election Section -->
+  <section id="election" class="py-16 px-4 text-center bg-gray-50">
+    <h2 class="text-3xl font-bold mb-6 text-green-700">Election</h2>
+    <p class="mb-6 text-gray-700">This section will include voter lists, schedules, and other election details. Documents will be uploaded shortly.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white text-center py-6">
+    <p>&copy; 2025 Shri Sahyadri Agro Multistate Co-Op Society Ltd. All rights reserved.</p>
+  </footer>
 </body>
+
+</html>
