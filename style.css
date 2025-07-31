@@ -25,22 +25,8 @@ nav {
   flex-wrap: wrap;
 }
 
-nav .logo {
+.logo {
   height: 45px;
-}
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.nav-toggle span {
-  height: 3px;
-  width: 25px;
-  background: #333;
-  margin-bottom: 4px;
-  border-radius: 2px;
 }
 
 .nav-links {
@@ -53,45 +39,30 @@ nav .logo {
   position: relative;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
   color: #007f3f;
 }
 
-/* Dropdowns */
-.nav-links li ul {
+/* Mobile Toggle */
+.nav-toggle {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  min-width: 180px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.nav-links li:hover ul {
-  display: block;
-}
-
-.nav-links li ul li {
-  margin: 0;
-}
-
-.nav-links li ul li a {
+  flex-direction: column;
+  cursor: pointer;
   padding: 10px;
-  display: block;
-  color: #333;
 }
 
-.nav-links li ul li a:hover {
-  background: #e6f4ea;
-  color: #007f3f;
+.nav-toggle span {
+  background: #333;
+  height: 3px;
+  margin: 4px 0;
+  width: 25px;
 }
 
 /* Hero */
@@ -145,12 +116,13 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* List style */
+/* Product List */
 ul {
   list-style: disc;
   padding-left: 20px;
 }
 
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -163,14 +135,14 @@ ul {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* PDF links */
+/* PDF Links */
 .pdf-links p {
   margin: 10px 0;
 }
 
 .pdf-links a {
-  text-decoration: none;
   color: #007f3f;
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -187,28 +159,28 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile Styles */
+/* Responsive */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
+  }
+
+  nav.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #ffffff;
-    padding: 10px 0;
   }
 
   .nav-links li {
     margin: 10px 0;
-    text-align: left;
-    padding: 0 20px;
-  }
-
-  nav.active .nav-links {
-    display: flex;
   }
 
   .about-offer {
@@ -217,5 +189,9 @@ footer {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }
