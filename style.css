@@ -18,10 +18,10 @@ nav {
   align-items: center;
   background-color: #ffffff;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 nav .logo {
@@ -29,23 +29,60 @@ nav .logo {
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 nav ul li {
-  margin-left: 20px;
+  position: relative;
 }
 
 nav ul li a {
+  display: block;
+  padding: 10px 15px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #007f3f;
+  background-color: #007f3f;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 100%;
+}
+
+nav ul li ul li a {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #444;
+  font-weight: normal;
+}
+
+nav ul li ul li a:hover {
+  background-color: #007f3f;
 }
 
 /* Hero */
@@ -66,7 +103,7 @@ nav ul li a:hover {
   color: #555;
 }
 
-/* About and Offer section */
+/* About + Offer */
 .about-offer {
   display: flex;
   justify-content: space-between;
@@ -99,7 +136,6 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Product List */
 ul {
   list-style: disc;
   padding-left: 20px;
@@ -115,7 +151,7 @@ ul {
 .gallery img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -127,22 +163,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-offer {
-    flex-direction: column;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-/* Election PDF links styling */
+/* Election PDF styling */
 .pdf-links p {
   margin-bottom: 10px;
   font-size: 1rem;
@@ -156,4 +177,44 @@ footer {
 
 .pdf-links a:hover {
   text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li ul {
+    position: static;
+    background-color: #f1f1f1;
+  }
+
+  nav ul li ul li a {
+    color: #333;
+    background-color: #f1f1f1;
+  }
+
+  nav ul li ul li a:hover {
+    background-color: #007f3f;
+    color: white;
+  }
+
+  .about-offer {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
