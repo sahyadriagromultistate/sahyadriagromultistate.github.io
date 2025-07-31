@@ -142,3 +142,18 @@ footer {
     font-size: 2rem;
   }
 }
+/* Election PDF links styling */
+.pdf-links p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.pdf-links a {
+  color: #007f3f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pdf-links a:hover {
+  text-decoration: underline;
+}
