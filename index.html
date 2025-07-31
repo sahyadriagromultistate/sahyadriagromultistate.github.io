@@ -2,34 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shri Sahyadri Agro Multistate Co-op Society Ltd</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Mobile Menu Button -->
-  <div class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
-    <span></span><span></span><span></span>
-  </div>
-
-  <!-- Navigation Bar -->
   <nav>
-    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="nav-left">
+      <img src="logo.png" alt="Logo" class="logo" />
+    </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li class="dropdown">
         <a href="#products">Products</a>
+        <ul class="dropdown-content">
+          <li><a href="#products">NPK</a></li>
+          <li><a href="#products">DAP</a></li>
+          <li><a href="#products">Water Soluble</a></li>
+          <li><a href="#products">Urea</a></li>
+          <li><a href="#products">Complex Grade Pesticide</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#gallery">Gallery</a>
+        <ul class="dropdown-content">
+          <li><a href="#gallery">Image 1</a></li>
+          <li><a href="#gallery">Image 2</a></li>
+          <li><a href="#gallery">Image 3</a></li>
+        </ul>
       </li>
       <li><a href="#contact">Contact</a></li>
       <li class="dropdown">
         <a href="#election">Election</a>
+        <ul class="dropdown-content">
+          <li><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List</a></li>
+          <li><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Letter</a></li>
+          <li><a href="Election order Signed by RO.pdf" target="_blank">Election Order</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#board">Board of Directors</a>
+        <ul class="dropdown-content">
+          <li><a href="#board">View Members</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="registration-certificate.pdf" target="_blank">Registration Certificate</a>
@@ -37,13 +52,11 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
   <header id="home" class="hero">
     <h1>SHRI SAHYADRI AGRO MULTISTATE CO-OP SOCIETY LTD</h1>
     <p>Cultivating Community and Sustainability</p>
   </header>
 
-  <!-- About & What We Offer -->
   <section class="about-offer">
     <div class="column">
       <h2>About Us</h2>
@@ -55,7 +68,6 @@
     </div>
   </section>
 
-  <!-- Products -->
   <section id="products">
     <h2>Our Products</h2>
     <ul>
@@ -67,56 +79,49 @@
     </ul>
   </section>
 
-  <!-- Gallery -->
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
       <img src="gallery1.jpg" alt="Gallery Image 1" />
       <img src="gallery2.jpg" alt="Gallery Image 2" />
       <img src="gallery3.jpg" alt="Gallery Image 3" />
-      <!-- Add more images as needed -->
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p><strong>Email:</strong> sahyadriagromultistate@gmail.com</p>
-    <p><strong>Phone:</strong> +91 9423193809</p>
-    <p><strong>Address:</strong> 12A Phule Colony, Parola Road, Dist. Dhule, Maharashtra - 424001</p>
-    <p><strong>Office Hours:</strong> Mon - Sat, 10 AM to 7 PM</p>
+    <p>Email: sahyadriagromultistate@gmail.com</p>
+    <p>Phone: +91 9423193809</p>
+    <p>Address: 12A Phule colony, Parola Road, Dist. Dhule, Maharashtra - 424001</p>
+    <p>Office Hours: Mon-Sat, 10am - 7pm</p>
   </section>
 
-  <!-- Election -->
   <section id="election">
     <h2>Election</h2>
     <div class="pdf-links">
-      <p><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List with Membership No.</a></p>
+      <p><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List with Membership No</a></p>
       <p><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Demanding Letter by AO</a></p>
       <p><a href="Election order Signed by RO.pdf" target="_blank">Election Order Signed by RO</a></p>
     </div>
   </section>
 
-  <!-- Board of Directors -->
   <section id="board">
     <h2>Board of Directors</h2>
     <ul>
       <li><strong>Chairman:</strong> Anant Sahebrao Patil</li>
       <li><strong>Vice Chairman:</strong> Kavita Anant Patil</li>
-      <li><strong>Member:</strong> Nikita Anant Patil</li>
-      <li><strong>Member:</strong> Harshada Rajendra Shukla</li>
-      <li><strong>Member:</strong> Sudhakar Prakash Wagh</li>
-      <li><strong>Member:</strong> Pawar Kiran Pralhad</li>
-      <li><strong>Member:</strong> Kumud Kiran Pawar</li>
-      <li><strong>Member:</strong> Hansraj Hilal Kunwar</li>
-      <li><strong>Member:</strong> Ishwar Supadu Ramraje</li>
+      <li>Nikita Anant Patil</li>
+      <li>Harshada Rajendra Shukla</li>
+      <li>Sudhakar Prakash Wagh</li>
+      <li>Pawar Kiran Pralhad</li>
+      <li>Kumud Kiran Pawar</li>
+      <li>Hansraj Hilal Kunwar</li>
+      <li>Ishwar Supadu Ramraje</li>
     </ul>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Shri Sahyadri Agro Multistate Co-op Society Ltd</p>
   </footer>
-
 </body>
 </html>
