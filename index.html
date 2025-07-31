@@ -8,33 +8,30 @@
 </head>
 <body>
 
-  <!-- Mobile Toggle Button -->
+  <!-- Mobile Menu Button -->
   <div class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </div>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav>
     <img src="logo.png" alt="Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li>
+      <li class="dropdown">
         <a href="#products">Products</a>
-        <!-- Dropdown (optional items can be placed here) -->
       </li>
-      <li>
+      <li class="dropdown">
         <a href="#gallery">Gallery</a>
       </li>
       <li><a href="#contact">Contact</a></li>
-      <li>
+      <li class="dropdown">
         <a href="#election">Election</a>
       </li>
-      <li>
+      <li class="dropdown">
         <a href="#board">Board of Directors</a>
       </li>
-      <li>
+      <li class="dropdown">
         <a href="registration-certificate.pdf" target="_blank">Registration Certificate</a>
       </li>
     </ul>
@@ -46,7 +43,7 @@
     <p>Cultivating Community and Sustainability</p>
   </header>
 
-  <!-- About & Offer -->
+  <!-- About & What We Offer -->
   <section class="about-offer">
     <div class="column">
       <h2>About Us</h2>
@@ -77,7 +74,7 @@
       <img src="gallery1.jpg" alt="Gallery Image 1" />
       <img src="gallery2.jpg" alt="Gallery Image 2" />
       <img src="gallery3.jpg" alt="Gallery Image 3" />
-      <!-- Add more as needed -->
+      <!-- Add more images as needed -->
     </div>
   </section>
 
