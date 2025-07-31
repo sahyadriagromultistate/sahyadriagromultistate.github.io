@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,23 +7,22 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f8f8;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-/* Navbar */
+/* Navbar styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
-  flex-wrap: wrap;
+  z-index: 1000;
 }
 
 .logo {
@@ -32,10 +32,10 @@ nav {
 .nav-links {
   display: flex;
   list-style: none;
+  gap: 20px;
 }
 
 .nav-links li {
-  margin-left: 20px;
   position: relative;
 }
 
@@ -43,29 +43,46 @@ nav {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: #007f3f;
 }
 
-/* Mobile Toggle */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
+/* Dropdown */
+.dropdown {
   cursor: pointer;
-  padding: 10px;
 }
 
-.nav-toggle span {
-  background: #333;
-  height: 3px;
-  margin: 4px 0;
-  width: 25px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 100;
+  top: 100%;
+  left: 0;
 }
 
-/* Hero */
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+  color: #007f3f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero section */
 .hero {
   padding: 60px 20px;
   text-align: center;
@@ -73,17 +90,17 @@ nav {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  color: #2d552f;
+  font-size: 2.4rem;
+  color: #215c2a;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-top: 10px;
   color: #555;
 }
 
-/* About and Offer */
+/* About/Offer Section */
 .about-offer {
   display: flex;
   justify-content: space-between;
@@ -104,7 +121,7 @@ nav {
   margin-bottom: 10px;
 }
 
-/* Sections */
+/* Section Styling */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -116,12 +133,6 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Product List */
-ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
 /* Gallery */
 .gallery {
   display: grid;
@@ -131,13 +142,23 @@ ul {
 
 .gallery img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #007f3f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
 }
 
 /* PDF Links */
 .pdf-links p {
-  margin: 10px 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 .pdf-links a {
@@ -150,37 +171,20 @@ ul {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  background-color: #007f3f;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
+/* Mobile */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: flex;
-  }
-
-  nav.active .nav-links {
-    display: flex;
+  nav {
     flex-direction: column;
-    width: 100%;
-    background: #fff;
-    padding: 10px;
+    align-items: flex-start;
   }
 
   .nav-links {
-    display: none;
     flex-direction: column;
     width: 100%;
   }
 
   .nav-links li {
-    margin: 10px 0;
+    margin-bottom: 10px;
   }
 
   .about-offer {
@@ -189,9 +193,5 @@ footer {
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
   }
 }
