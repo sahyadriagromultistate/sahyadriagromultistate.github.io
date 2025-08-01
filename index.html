@@ -6,11 +6,11 @@
   <title>Shri Sahyadri Agro Multistate Co-op Society Ltd</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-    function showSection(id) {
-      document.querySelectorAll('.content-section').forEach(section => {
-        section.style.display = 'none';
-      });
-      document.getElementById(id).style.display = 'block';
+    function toggleSection(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => section.style.display = 'none');
+      const selected = document.getElementById(id);
+      if (selected) selected.style.display = 'block';
     }
   </script>
 </head>
@@ -20,18 +20,18 @@
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li>
-        <a href="#" onclick="showSection('products')">Products</a>
+        <a href="#" onclick="toggleSection('products')">Products</a>
       </li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
       <li>
-        <a href="#" onclick="showSection('election')">Election</a>
+        <a href="#" onclick="toggleSection('registration')">Registration Certificate</a>
       </li>
       <li>
-        <a href="#" onclick="showSection('board')">Board of Directors</a>
+        <a href="#" onclick="toggleSection('election')">Election</a>
       </li>
       <li>
-        <a href="registration-certificate.pdf" target="_blank">Registration Certificate</a>
+        <a href="#" onclick="toggleSection('board')">Board of Directors</a>
       </li>
     </ul>
   </nav>
@@ -66,10 +66,11 @@
     <p>Email: sahyadriagromultistate@gmail.com</p>
     <p>Phone: +91 9423193809</p>
     <p>Address: 12A Phule Colony, Parola Road, Dist. Dhule, Maharashtra - 424001</p>
-    <p>Office Hours: Mon - Sat, 10:00 AM - 7:00 PM</p>
+    <p>Working Hours: Mon - Sat, 10am to 7pm</p>
   </section>
 
-  <section id="products" class="content-section" style="display:none">
+  <!-- Hidden Sections -->
+  <section id="products" class="content-section">
     <h2>Our Products</h2>
     <ul>
       <li>NPK</li>
@@ -80,19 +81,26 @@
     </ul>
   </section>
 
-  <section id="election" class="content-section" style="display:none">
-    <h2>Election</h2>
-    <p><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List with Membership No</a></p>
-    <p><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Demanding Letter by AO</a></p>
-    <p><a href="Election order Signed by RO.pdf" target="_blank">Election Order Signed by RO</a></p>
+  <section id="registration" class="content-section">
+    <h2>Registration Certificate</h2>
+    <a href="registration-certificate.pdf" target="_blank">View Certificate (PDF)</a>
   </section>
 
-  <section id="board" class="content-section" style="display:none">
-    <h2>Board of Directors</h2>
-    <p><strong>Chairman:</strong> Anant Sahebrao Patil</p>
-    <p><strong>Vice Chairman:</strong> Kavita Anant Patil</p>
-    <h3>Members:</h3>
+  <section id="election" class="content-section">
+    <h2>Election</h2>
     <ul>
+      <li><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List with Membership No</a></li>
+      <li><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Demanding Letter by AO</a></li>
+      <li><a href="Election order Signed by RO.pdf" target="_blank">Election Order Signed by RO</a></li>
+    </ul>
+  </section>
+
+  <section id="board" class="content-section">
+    <h2>Board of Directors</h2>
+    <ul>
+      <li>Chairman – Anant Sahebrao Patil</li>
+      <li>Vice Chairman – Kavita Anant Patil</li>
+      <li>Members:</li>
       <li>Anant Sahebrao Patil</li>
       <li>Kavita Anant Patil</li>
       <li>Nikita Anant Patil</li>
