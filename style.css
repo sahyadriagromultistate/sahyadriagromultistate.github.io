@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -22,16 +22,17 @@ nav {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
-nav .logo {
+.logo {
   height: 45px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -39,46 +40,41 @@ nav .logo {
   position: relative;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
   color: #007f3f;
 }
 
-.dropdown {
+/* Dropdown */
+.dropdown-content {
   display: none;
   position: absolute;
+  background-color: white;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
+  border-radius: 6px;
   z-index: 999;
 }
 
-.nav-links li:hover .dropdown {
+.dropdown-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown a {
-  display: block;
-  padding: 5px 10px;
-  white-space: nowrap;
-  color: #333;
-  text-decoration: none;
-}
-
-.dropdown a:hover {
-  background-color: #f0f0f0;
-  color: #007f3f;
-}
-
-/* Hero Section */
+/* Hero */
 .hero {
   padding: 60px 20px;
   text-align: center;
@@ -96,7 +92,7 @@ nav .logo {
   color: #555;
 }
 
-/* About and Offer */
+/* About and Offer section */
 .about-offer {
   display: flex;
   justify-content: space-between;
@@ -107,7 +103,7 @@ nav .logo {
   flex-wrap: wrap;
 }
 
-.column {
+.about-offer .column {
   flex: 1;
   min-width: 300px;
 }
@@ -117,7 +113,7 @@ nav .logo {
   margin-bottom: 10px;
 }
 
-/* Section */
+/* Sections */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -127,12 +123,6 @@ section {
 section h2 {
   color: #007f3f;
   margin-bottom: 15px;
-}
-
-/* Product & Board Lists */
-ul {
-  list-style: disc;
-  padding-left: 20px;
 }
 
 /* Gallery */
@@ -157,12 +147,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Hidden Sections */
-.content-section {
-  display: none;
-}
-
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -171,8 +156,15 @@ footer {
 
   .nav-links {
     flex-direction: column;
+    width: 100%;
     gap: 10px;
-    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    box-shadow: none;
   }
 
   .about-offer {
