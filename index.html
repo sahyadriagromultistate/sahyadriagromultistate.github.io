@@ -5,33 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shri Sahyadri Agro Multistate Co-op Society Ltd</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleSection(id) {
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(section => section.style.display = 'none');
-      const selected = document.getElementById(id);
-      if (selected) selected.style.display = 'block';
-    }
-  </script>
 </head>
 <body>
   <nav>
     <img src="logo.png" alt="Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li>
-        <a href="#" onclick="toggleSection('products')">Products</a>
-      </li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li>
-        <a href="#" onclick="toggleSection('registration')">Registration Certificate</a>
+      <li class="dropdown">
+        <a href="#">Our Products</a>
+        <div class="dropdown-content">
+          <ul>
+            <li>NPK</li>
+            <li>DAP</li>
+            <li>Water Soluble Fertilizers</li>
+            <li>Urea</li>
+            <li>Complex Grade Pesticides</li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <a href="#" onclick="toggleSection('election')">Election</a>
+      <li class="dropdown">
+        <a href="#">Election</a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List</a></li>
+            <li><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Letter</a></li>
+            <li><a href="Election order Signed by RO.pdf" target="_blank">Election Order</a></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <a href="#" onclick="toggleSection('board')">Board of Directors</a>
+      <li><a href="registration-certificate.pdf" target="_blank">Registration Certificate</a></li>
+      <li class="dropdown">
+        <a href="#">Board of Directors</a>
+        <div class="dropdown-content">
+          <ul>
+            <li>Chairman – Anant Sahebrao Patil</li>
+            <li>Vice Chairman – Kavita Anant Patil</li>
+            <li>Anant Sahebrao Patil</li>
+            <li>Kavita Anant Patil</li>
+            <li>Nikita Anant Patil</li>
+            <li>Harshada Rajendra Shukla</li>
+            <li>Sudhakar Prakash Wagh</li>
+            <li>Pawar Kiran Pralhad</li>
+            <li>Kumud Kiran Pawar</li>
+            <li>Hansraj Hilal Kunwar</li>
+            <li>Ishwar Supadu Ramraje</li>
+          </ul>
+        </div>
       </li>
     </ul>
   </nav>
@@ -44,11 +65,11 @@
   <section class="about-offer">
     <div class="column">
       <h2>About Us</h2>
-      <p>At Shri Sahyadri Agro Multistate Cooperative Society Ltd., our mission is to support farmers with the essentials they need to thrive—quality seeds, effective fertilizers, and reliable pesticides. We’re dedicated to enhancing farm productivity, crop health, and long-term soil sustainability through trusted agro solutions and farmer-first service.</p>
+      <p>We are committed to uplifting the agricultural community through sustainable practices, innovative inputs, and cooperative growth models.</p>
     </div>
     <div class="column">
       <h2>What We Offer</h2>
-      <p>We offer high-yield seeds, nutrient-rich fertilizers, and trusted pesticides—empowering farmers to grow healthier crops, achieve stronger yields, and embrace sustainable farming.</p>
+      <p>From high-quality fertilizers to expert support, we provide a comprehensive range of agro products and services that empower farmers.</p>
     </div>
   </section>
 
@@ -65,52 +86,8 @@
     <h2>Contact</h2>
     <p>Email: sahyadriagromultistate@gmail.com</p>
     <p>Phone: +91 9423193809</p>
-    <p>Address: 12A Phule Colony, Parola Road, Dist. Dhule, Maharashtra - 424001</p>
-    <p>Working Hours: Mon - Sat, 10am to 7pm</p>
-  </section>
-
-  <!-- Hidden Sections -->
-  <section id="products" class="content-section">
-    <h2>Our Products</h2>
-    <ul>
-      <li>NPK</li>
-      <li>DAP</li>
-      <li>Water Soluble Fertilizers</li>
-      <li>Urea</li>
-      <li>Complex Grade Pesticides</li>
-    </ul>
-  </section>
-
-  <section id="registration" class="content-section">
-    <h2>Registration Certificate</h2>
-    <a href="registration-certificate.pdf" target="_blank">View Certificate (PDF)</a>
-  </section>
-
-  <section id="election" class="content-section">
-    <h2>Election</h2>
-    <ul>
-      <li><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List with Membership No</a></li>
-      <li><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Demanding Letter by AO</a></li>
-      <li><a href="Election order Signed by RO.pdf" target="_blank">Election Order Signed by RO</a></li>
-    </ul>
-  </section>
-
-  <section id="board" class="content-section">
-    <h2>Board of Directors</h2>
-    <ul>
-      <li>Chairman – Anant Sahebrao Patil</li>
-      <li>Vice Chairman – Kavita Anant Patil</li>
-      <li>Members:</li>
-      <li>Anant Sahebrao Patil</li>
-      <li>Kavita Anant Patil</li>
-      <li>Nikita Anant Patil</li>
-      <li>Harshada Rajendra Shukla</li>
-      <li>Sudhakar Prakash Wagh</li>
-      <li>Pawar Kiran Pralhad</li>
-      <li>Kumud Kiran Pawar</li>
-      <li>Hansraj Hilal Kunwar</li>
-      <li>Ishwar Supadu Ramraje</li>
-    </ul>
+    <p>Address: 12A Phule colony, Parola Road, Dist. Dhule, Maharashtra-424001</p>
+    <p>Hours: Mon–Sat: 10am to 7pm</p>
   </section>
 
   <footer>
