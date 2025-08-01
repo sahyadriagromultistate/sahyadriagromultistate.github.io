@@ -25,62 +25,80 @@ nav {
   flex-wrap: wrap;
 }
 
-nav .logo {
+.logo {
   height: 45px;
 }
 
-nav ul {
-  display: flex;
+.nav-links {
   list-style: none;
-  gap: 20px;
+  display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-nav ul li {
+.nav-links li {
   position: relative;
+  margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
-  padding: 8px 10px;
-  display: inline-block;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
   color: #007f3f;
 }
 
-/* Dropdown menu */
-nav ul li ul {
+/* Dropdown */
+.dropdown-content,
+.sub-dropdown .dropdown-content {
   display: none;
   position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-width: 220px;
   top: 100%;
   left: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  min-width: 220px;
-  z-index: 1000;
-}
-
-nav ul li:hover > ul {
-  display: block;
-}
-
-nav ul li ul li {
-  width: 100%;
-}
-
-nav ul li ul li a {
+  z-index: 10;
   padding: 10px;
+}
+
+.dropdown:hover .dropdown-content,
+.sub-dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown-content li {
+  padding: 5px 10px;
   white-space: nowrap;
 }
 
-/* Hero Section */
+.dropdown-content li a {
+  color: #333;
+}
+
+.dropdown-content li a:hover {
+  color: #007f3f;
+}
+
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown > a::after {
+  content: ' ▶';
+  font-size: 10px;
+}
+
+.sub-dropdown .dropdown-content {
+  left: 100%;
+  top: 0;
+}
+
+/* Hero */
 .hero {
   padding: 60px 20px;
   text-align: center;
@@ -119,7 +137,7 @@ nav ul li ul li a {
   margin-bottom: 10px;
 }
 
-/* Generic Section Styling */
+/* Sections */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -131,13 +149,12 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Product List */
-ul.list-style {
+/* Product List & Contact Info */
+ul {
   list-style: disc;
   padding-left: 20px;
 }
 
-/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -157,45 +174,22 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
-  margin-top: 50px;
 }
 
-/* Election PDF Links */
-.pdf-links p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-.pdf-links a {
-  color: #007f3f;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.pdf-links a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Styling */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  nav ul {
+  .nav-links {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
   }
 
-  nav ul li ul {
-    position: static;
-    border: none;
-    box-shadow: none;
-  }
-
-  nav ul li:hover > ul {
-    display: block;
+  .nav-links li {
+    margin: 10px 0;
   }
 
   .hero h1 {
