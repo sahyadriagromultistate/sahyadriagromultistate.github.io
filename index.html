@@ -5,48 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shri Sahyadri Agro Multistate Co-op Society Ltd</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </head>
 <body>
   <nav>
-    <div class="nav-left">
-      <img src="logo.png" alt="Logo" class="logo" />
-    </div>
+    <img src="logo.png" alt="Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li class="dropdown">
-        <a href="#products">Products</a>
-        <ul class="dropdown-content">
-          <li><a href="#products">NPK</a></li>
-          <li><a href="#products">DAP</a></li>
-          <li><a href="#products">Water Soluble</a></li>
-          <li><a href="#products">Urea</a></li>
-          <li><a href="#products">Complex Grade Pesticide</a></li>
-        </ul>
+      <li>
+        <a href="#" onclick="showSection('products')">Products</a>
       </li>
-      <li class="dropdown">
-        <a href="#gallery">Gallery</a>
-        <ul class="dropdown-content">
-          <li><a href="#gallery">Image 1</a></li>
-          <li><a href="#gallery">Image 2</a></li>
-          <li><a href="#gallery">Image 3</a></li>
-        </ul>
-      </li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li class="dropdown">
-        <a href="#election">Election</a>
-        <ul class="dropdown-content">
-          <li><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List</a></li>
-          <li><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Letter</a></li>
-          <li><a href="Election order Signed by RO.pdf" target="_blank">Election Order</a></li>
-        </ul>
+      <li>
+        <a href="#" onclick="showSection('election')">Election</a>
       </li>
-      <li class="dropdown">
-        <a href="#board">Board of Directors</a>
-        <ul class="dropdown-content">
-          <li><a href="#board">View Members</a></li>
-        </ul>
+      <li>
+        <a href="#" onclick="showSection('board')">Board of Directors</a>
       </li>
-      <li class="dropdown">
+      <li>
         <a href="registration-certificate.pdf" target="_blank">Registration Certificate</a>
       </li>
     </ul>
@@ -68,17 +52,6 @@
     </div>
   </section>
 
-  <section id="products">
-    <h2>Our Products</h2>
-    <ul>
-      <li>NPK</li>
-      <li>DAP</li>
-      <li>Water Soluble Fertilizers</li>
-      <li>Urea</li>
-      <li>Complex Grade Pesticides</li>
-    </ul>
-  </section>
-
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
@@ -92,24 +65,36 @@
     <h2>Contact</h2>
     <p>Email: sahyadriagromultistate@gmail.com</p>
     <p>Phone: +91 9423193809</p>
-    <p>Address: 12A Phule colony, Parola Road, Dist. Dhule, Maharashtra - 424001</p>
-    <p>Office Hours: Mon-Sat, 10am - 7pm</p>
+    <p>Address: 12A Phule Colony, Parola Road, Dist. Dhule, Maharashtra - 424001</p>
+    <p>Office Hours: Mon - Sat, 10:00 AM - 7:00 PM</p>
   </section>
 
-  <section id="election">
-    <h2>Election</h2>
-    <div class="pdf-links">
-      <p><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List with Membership No</a></p>
-      <p><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Demanding Letter by AO</a></p>
-      <p><a href="Election order Signed by RO.pdf" target="_blank">Election Order Signed by RO</a></p>
-    </div>
-  </section>
-
-  <section id="board">
-    <h2>Board of Directors</h2>
+  <section id="products" class="content-section" style="display:none">
+    <h2>Our Products</h2>
     <ul>
-      <li><strong>Chairman:</strong> Anant Sahebrao Patil</li>
-      <li><strong>Vice Chairman:</strong> Kavita Anant Patil</li>
+      <li>NPK</li>
+      <li>DAP</li>
+      <li>Water Soluble Fertilizers</li>
+      <li>Urea</li>
+      <li>Complex Grade Pesticides</li>
+    </ul>
+  </section>
+
+  <section id="election" class="content-section" style="display:none">
+    <h2>Election</h2>
+    <p><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List with Membership No</a></p>
+    <p><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Demanding Letter by AO</a></p>
+    <p><a href="Election order Signed by RO.pdf" target="_blank">Election Order Signed by RO</a></p>
+  </section>
+
+  <section id="board" class="content-section" style="display:none">
+    <h2>Board of Directors</h2>
+    <p><strong>Chairman:</strong> Anant Sahebrao Patil</p>
+    <p><strong>Vice Chairman:</strong> Kavita Anant Patil</p>
+    <h3>Members:</h3>
+    <ul>
+      <li>Anant Sahebrao Patil</li>
+      <li>Kavita Anant Patil</li>
       <li>Nikita Anant Patil</li>
       <li>Harshada Rajendra Shukla</li>
       <li>Sudhakar Prakash Wagh</li>
