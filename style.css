@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,82 +7,46 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f8f8f8;
   color: #333;
   line-height: 1.6;
 }
 
-/* Navbar styles */
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo {
+nav .logo {
   height: 45px;
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 20px;
 }
 
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
   color: #007f3f;
 }
 
-/* Dropdown */
-.dropdown {
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  min-width: 200px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  z-index: 100;
-  top: 100%;
-  left: 0;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-  white-space: nowrap;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0f0f0;
-  color: #007f3f;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Hero section */
+/* Hero Section */
 .hero {
   padding: 60px 20px;
   text-align: center;
@@ -90,17 +54,17 @@ nav {
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  color: #215c2a;
+  font-size: 2.5rem;
+  color: #2d552f;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 10px;
   color: #555;
 }
 
-/* About/Offer Section */
+/* About and Offer */
 .about-offer {
   display: flex;
   justify-content: space-between;
@@ -111,7 +75,7 @@ nav {
   flex-wrap: wrap;
 }
 
-.about-offer .column {
+.column {
   flex: 1;
   min-width: 300px;
 }
@@ -121,7 +85,7 @@ nav {
   margin-bottom: 10px;
 }
 
-/* Section Styling */
+/* Section */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -133,6 +97,12 @@ section h2 {
   margin-bottom: 15px;
 }
 
+/* Product & Board Lists */
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
 /* Gallery */
 .gallery {
   display: grid;
@@ -142,8 +112,8 @@ section h2 {
 
 .gallery img {
   width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Footer */
@@ -155,23 +125,12 @@ footer {
   font-size: 0.9rem;
 }
 
-/* PDF Links */
-.pdf-links p {
-  margin-bottom: 10px;
-  font-size: 1rem;
+/* Hidden Sections */
+.content-section {
+  display: none;
 }
 
-.pdf-links a {
-  color: #007f3f;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.pdf-links a:hover {
-  text-decoration: underline;
-}
-
-/* Mobile */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -180,11 +139,8 @@ footer {
 
   .nav-links {
     flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-links li {
-    margin-bottom: 10px;
+    gap: 10px;
+    margin-top: 10px;
   }
 
   .about-offer {
