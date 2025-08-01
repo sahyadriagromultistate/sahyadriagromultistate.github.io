@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -23,58 +22,65 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-wrap: wrap;
 }
 
-.logo {
+nav .logo {
   height: 45px;
 }
 
-.nav-links {
-  list-style: none;
+nav ul {
   display: flex;
-  align-items: center;
+  list-style: none;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.nav-links li {
+nav ul li {
   position: relative;
 }
 
-.nav-links a {
+nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
+  padding: 8px 10px;
+  display: inline-block;
 }
 
-.nav-links a:hover {
+nav ul li a:hover {
   color: #007f3f;
 }
 
-/* Dropdown */
-.dropdown-content {
+/* Dropdown menu */
+nav ul li ul {
   display: none;
   position: absolute;
-  background-color: white;
   top: 100%;
   left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   min-width: 220px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 6px;
-  z-index: 999;
+  z-index: 1000;
 }
 
-.dropdown-content ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.dropdown:hover .dropdown-content {
+nav ul li:hover > ul {
   display: block;
 }
 
-/* Hero */
+nav ul li ul li {
+  width: 100%;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Hero Section */
 .hero {
   padding: 60px 20px;
   text-align: center;
@@ -113,7 +119,7 @@ nav {
   margin-bottom: 10px;
 }
 
-/* Sections */
+/* Generic Section Styling */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -123,6 +129,12 @@ section {
 section h2 {
   color: #007f3f;
   margin-bottom: 15px;
+}
+
+/* Product List */
+ul.list-style {
+  list-style: disc;
+  padding-left: 20px;
 }
 
 /* Gallery */
@@ -145,33 +157,52 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
+  margin-top: 50px;
 }
 
-/* Responsive */
+/* Election PDF Links */
+.pdf-links p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.pdf-links a {
+  color: #007f3f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pdf-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .nav-links {
+  nav ul {
     flex-direction: column;
-    width: 100%;
     gap: 10px;
   }
 
-  .dropdown-content {
-    position: relative;
-    top: auto;
-    left: auto;
+  nav ul li ul {
+    position: static;
+    border: none;
     box-shadow: none;
   }
 
-  .about-offer {
-    flex-direction: column;
+  nav ul li:hover > ul {
+    display: block;
   }
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .about-offer {
+    flex-direction: column;
   }
 }
