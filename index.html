@@ -8,51 +8,50 @@
 </head>
 <body>
   <nav>
-    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="nav-left">
+      <img src="logo.png" alt="Logo" class="logo" />
+    </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+      <li class="dropdown">
+        <a href="#">Products ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#products">Our Products</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Gallery ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#gallery">Photos</a></li>
+        </ul>
+      </li>
       <li><a href="#contact">Contact</a></li>
       <li class="dropdown">
-        <a href="#">Our Products</a>
-        <div class="dropdown-content">
-          <ul>
-            <li>NPK</li>
-            <li>DAP</li>
-            <li>Water Soluble Fertilizers</li>
-            <li>Urea</li>
-            <li>Complex Grade Pesticides</li>
-          </ul>
-        </div>
+        <a href="#">Election ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List</a></li>
+          <li><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Letter</a></li>
+          <li><a href="Election order Signed by RO.pdf" target="_blank">RO Order</a></li>
+          <li class="dropdown-sub">
+            <a href="#">Pressnote ▸</a>
+            <ul class="dropdown-menu right">
+              <li><a href="Pressnote for Maharashtra.jpeg" target="_blank">Maharashtra</a></li>
+              <li><a href="Pressnote for Madhya Pradesh.jpeg" target="_blank">Madhya Pradesh</a></li>
+            </ul>
+          </li>
+        </ul>
       </li>
       <li class="dropdown">
-        <a href="#">Election</a>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="VOTERS LIST WITH MEMBERSHIP NO.pdf" target="_blank">Voters List</a></li>
-            <li><a href="ARO demanding letter by AO.pdf" target="_blank">ARO Letter</a></li>
-            <li><a href="Election order Signed by RO.pdf" target="_blank">Election Order</a></li>
-          </ul>
-        </div>
+        <a href="#">Board of Directors ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#board">Board Members</a></li>
+        </ul>
       </li>
-      <li><a href="registration-certificate.pdf" target="_blank">Registration Certificate</a></li>
       <li class="dropdown">
-        <a href="#">Board of Directors</a>
-        <div class="dropdown-content">
-          <ul>
-            <li>Chairman – Anant Sahebrao Patil</li>
-            <li>Vice Chairman – Kavita Anant Patil</li>
-            <li>Anant Sahebrao Patil</li>
-            <li>Kavita Anant Patil</li>
-            <li>Nikita Anant Patil</li>
-            <li>Harshada Rajendra Shukla</li>
-            <li>Sudhakar Prakash Wagh</li>
-            <li>Pawar Kiran Pralhad</li>
-            <li>Kumud Kiran Pawar</li>
-            <li>Hansraj Hilal Kunwar</li>
-            <li>Ishwar Supadu Ramraje</li>
-          </ul>
-        </div>
+        <a href="#">Registration Certificate ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="registration-certificate.pdf" target="_blank">View Certificate</a></li>
+        </ul>
       </li>
     </ul>
   </nav>
@@ -73,6 +72,17 @@
     </div>
   </section>
 
+  <section id="products">
+    <h2>Our Products</h2>
+    <ul>
+      <li>NPK</li>
+      <li>DAP</li>
+      <li>Water Soluble Fertilizers</li>
+      <li>Urea</li>
+      <li>Complex Grade Pesticides</li>
+    </ul>
+  </section>
+
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
@@ -86,8 +96,24 @@
     <h2>Contact</h2>
     <p>Email: sahyadriagromultistate@gmail.com</p>
     <p>Phone: +91 9423193809</p>
-    <p>Address: 12A Phule colony, Parola Road, Dist. Dhule, Maharashtra-424001</p>
-    <p>Hours: Mon–Sat: 10am to 7pm</p>
+    <p>Address: 12A, Phule Colony, Parola Road, Dist. Dhule, Maharashtra-424001</p>
+    <p>Office Hours: Monday to Saturday, 10:00 AM to 7:00 PM</p>
+  </section>
+
+  <section id="board">
+    <h2>Board of Directors</h2>
+    <ul>
+      <li>Chairman – Anant Sahebrao Patil</li>
+      <li>Vice Chairman – Kavita Anant Patil</li>
+      <li>Members:</li>
+      <li>Nikita Anant Patil</li>
+      <li>Harshada Rajendra Shukla</li>
+      <li>Sudhakar Prakash Wagh</li>
+      <li>Pawar Kiran Pralhad</li>
+      <li>Kumud Kiran Pawar</li>
+      <li>Hansraj Hilal Kunwar</li>
+      <li>Ishwar Supadu Ramraje</li>
+    </ul>
   </section>
 
   <footer>
