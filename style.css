@@ -35,6 +35,10 @@ nav .logo {
   gap: 20px;
 }
 
+.nav-links li {
+  position: relative;
+}
+
 .nav-links li a {
   text-decoration: none;
   color: #333;
@@ -43,6 +47,34 @@ nav .logo {
 }
 
 .nav-links li a:hover {
+  color: #007f3f;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 999;
+}
+
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 5px 10px;
+  white-space: nowrap;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0;
   color: #007f3f;
 }
 
